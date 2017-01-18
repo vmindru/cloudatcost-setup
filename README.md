@@ -8,6 +8,8 @@ Requirements
 
 None
 
+I recommend to use this one in tandem with cloudatcost-cli 
+
 Role Variables
 --------------
 
