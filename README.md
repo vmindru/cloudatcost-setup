@@ -8,7 +8,14 @@ Requirements
 
 None
 
-I recommend to use this one in tandem with cloudatcost-cli 
+I recommend to use this one in tandem with [cloudatcost-ansible]https://github.com/vmindru/cloudatcostapi
+
+### E.G. Doing first run against your env. 
+
+```
+ansible-playbook -i cloudatcost-ansible playbooks/cloudatcost/test.yml -e "ansible_ssh_pass={{hostvars[inventory_hostname].rootpass}}" -u root
+```
+
 
 Role Variables
 --------------
