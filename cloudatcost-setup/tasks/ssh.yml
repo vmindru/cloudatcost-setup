@@ -1,0 +1,28 @@
+---
+- name: create vmindru user
+  user:
+    name: "{{ user.name }}"
+    comment: "{{ user.comment }}"
+
+- name: create ssh dir
+  file:
+    path: "/home/{{ user.name }}/.ssh/"
+    mode: 0600
+    state: directory 
+
+- name: Set authorized key 
+  authorized_key:
+    user: vmindru
+    state: present
+    key: "{{ lookup('file', user.ssh_key_path ) }}"
+
+- name: setup SUDO access
+  lineinfile:
+    dest: /etc/sudoers
+    state: present
+    regexp: '^vmindru'
+    line: "{{ user.name }} ALL=(ALL) NOPASSWD: ALL"
+    validate: 'visudo -cf %s'
+  become: yes
+
+  

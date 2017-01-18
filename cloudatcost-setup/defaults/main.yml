@@ -1,0 +1,8 @@
+---
+# defaults file for cloudatcost-setup
+
+user:
+  name: "user"
+  comment: "User Name"
+  ssh_key_path: "/home/user/.ssh/cloudatcost.pub"
+

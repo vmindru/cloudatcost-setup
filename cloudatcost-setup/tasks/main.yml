@@ -1,0 +1,6 @@
+---
+# tasks file for cloudatcost-setup
+#
+
+- name: setup access
+  include: ssh.yml
