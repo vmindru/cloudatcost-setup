@@ -2,7 +2,7 @@ galaxy_info:
   author: Veaceslav Mindru
   description: Cloud At Cost - quick setup
   company: N/A
-  license: license (GPLv2, CC-BY, etc)
+  license: license Apache 2.0
   min_ansible_version: 2.0
   galaxy_tags: []
 dependencies: []
